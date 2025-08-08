@@ -44,7 +44,7 @@ const BlogCard = ({ blog }) => {
         </span>
         <Link
           to={`/blog/${blog._id}`}
-          className="text-black font-mono "
+          className="text-red-500 font-mono hover:underline"
         >
           Read more
         </Link>
