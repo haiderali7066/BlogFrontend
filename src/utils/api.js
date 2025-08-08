@@ -1,13 +1,12 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://blogbackend-1-micv.onrender.com/api", // 🔗 Updated to your new backend URL
-  withCredentials: true, // ✅ Required for sending cookies if using auth
+  baseURL: "http://localhost:5000/api", // Your local backend server
+  withCredentials: true, // Keep this if using cookies/auth
 });
 
 API.interceptors.request.use((req) => {
   const user = JSON.parse(localStorage.getItem("user"));
-  console.log("🔐 Token being sent:", user?.token);
   if (user?.token) {
     req.headers.Authorization = `Bearer ${user.token}`;
   }
