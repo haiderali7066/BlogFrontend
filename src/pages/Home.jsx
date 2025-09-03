@@ -128,7 +128,7 @@ const Home = () => {
       </section>
 
       {/* Features */}
-      <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto px-4">
+      <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto px-4 mt-10">
         {[
           {
             title: "Author-only posting",
@@ -149,12 +149,12 @@ const Home = () => {
         ].map((f, i) => (
           <div
             key={i}
-            className="rounded-xl border border-gray-200 p-4 sm:p-6 shadow-sm hover:shadow-md transition"
+            className="rounded-xl border border-gray-200 bg-white/60 backdrop-blur-md p-4 sm:p-6 hover:border-blue-400 transition"
           >
-            <h3 className="font-semibold text-sm sm:text-lg mb-1 sm:mb-2">
+            <h3 className="font-semibold text-sm sm:text-lg mb-1 sm:mb-2 text-blue-700">
               {f.title}
             </h3>
-            <p className="text-gray-600 text-xs sm:text-base">{f.desc}</p>
+            <p className="text-gray-600 text-xs sm:text-sm">{f.desc}</p>
           </div>
         ))}
       </section>
