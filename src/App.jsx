@@ -8,14 +8,17 @@ import Profile from "./pages/Profile";
 import EditProfile from "./pages/EditProfile";
 import Header from "./components/Header";
 import EditBlog from "./pages/EditBlog"; // ✅ Add this line
+import Footers from "./components/Footer";
+import About from "./pages/About";
 
 function App() {
   return (
     <div>
       <Header />
-      <div className="max-w-5xl mx-auto px-4 py-6">
+      <div className=" px-4 py-6">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/create" element={<CreateBlog />} />
@@ -26,6 +29,7 @@ function App() {
           <Route path="/edit-profile" element={<EditProfile />} />
         </Routes>
       </div>
+      <Footers />
     </div>
   );
 }
