@@ -131,8 +131,8 @@ const Home = () => {
       <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto px-4 mt-10">
         {[
           {
-            title: "Author-only posting",
-            desc: "Only verified authors can publish content.",
+            title: "Editing Author-only",
+            desc: "Only verified authors can Edit content.",
           },
           {
             title: "MongoDB powered",
@@ -143,8 +143,8 @@ const Home = () => {
             desc: "Clean design, responsive layout.",
           },
           {
-            title: "Categories & tags",
-            desc: "Organize blogs for easy discovery.",
+            title: "CRUD Oprations",
+            desc: "Create Read Update Delete",
           },
         ].map((f, i) => (
           <div
