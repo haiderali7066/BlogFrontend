@@ -87,12 +87,12 @@ const Home = () => {
   return (
     <div className="space-y-20 ">
       {/* Hero Section */}
-      <section className="rounded-2xl mt-10 bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-12 shadow-xl">
+      <section className="rounded-2xl mt-6 sm:mt-10 bg-gradient-to-br from-blue-600 to-indigo-700 text-white px-4 py-10 sm:px-8 sm:py-16 shadow-xl">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight">
             Share Ideas. Inspire Readers.
           </h1>
-          <p className="text-lg leading-relaxed opacity-90 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg leading-relaxed opacity-90 max-w-2xl mx-auto">
             A modern blogging platform where{" "}
             <span className="font-semibold">authors</span> can{" "}
             <span className="font-semibold">register</span>,{" "}
@@ -100,22 +100,24 @@ const Home = () => {
             <span className="font-semibold">publish blogs</span> stored securely
             in <span className="font-semibold">MongoDB</span>.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+
+          {/* CTA Buttons */}
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-4">
             <Link
               to="/register"
-              className="px-6 py-3 rounded-xl bg-white text-blue-700 font-semibold shadow hover:shadow-lg hover:scale-105 transition"
+              className="px-5 py-3 rounded-xl bg-white text-blue-700 font-semibold shadow hover:shadow-lg hover:scale-105 transition text-center"
             >
               Create account
             </Link>
             <Link
               to="/login"
-              className="px-6 py-3 rounded-xl bg-blue-900/30 border border-white/30 text-white font-semibold hover:bg-blue-900/50 transition"
+              className="px-5 py-3 rounded-xl bg-blue-900/30 border border-white/30 text-white font-semibold hover:bg-blue-900/50 transition text-center"
             >
               Login
             </Link>
             <button
               onClick={handleWriteClick} // ✅ logic here
-              className="px-6 py-3 rounded-xl bg-indigo-900/40 border border-white/30 text-white font-semibold hover:bg-indigo-900/60 transition"
+              className="px-5 py-3 rounded-xl bg-indigo-900/40 border border-white/30 text-white font-semibold hover:bg-indigo-900/60 transition text-center"
             >
               Write a blog
             </button>
