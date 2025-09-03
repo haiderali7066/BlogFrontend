@@ -102,22 +102,24 @@ const Home = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               to="/register"
-              className="px-5 py-3 rounded-xl bg-white text-blue-700 font-semibold shadow hover:shadow-lg hover:scale-105 transition text-center"
+              className="w-32 sm:w-auto mx-auto sm:mx-0 px-4 py-2 sm:px-5 sm:py-3 rounded-lg sm:rounded-xl bg-white text-blue-700 font-medium sm:font-semibold shadow hover:shadow-lg hover:scale-105 transition text-center text-sm sm:text-base"
             >
               Create account
             </Link>
+
             <Link
               to="/login"
-              className="px-5 py-3 rounded-xl bg-blue-900/30 border border-white/30 text-white font-semibold hover:bg-blue-900/50 transition text-center"
+              className="w-32 sm:w-auto mx-auto sm:mx-0 px-4 py-2 sm:px-5 sm:py-3 rounded-lg sm:rounded-xl bg-blue-900/30 border border-white/30 text-white font-medium sm:font-semibold hover:bg-blue-900/50 transition text-center text-sm sm:text-base"
             >
               Login
             </Link>
+
             <button
-              onClick={handleWriteClick} // ✅ logic here
-              className="px-5 py-3 rounded-xl bg-indigo-900/40 border border-white/30 text-white font-semibold hover:bg-indigo-900/60 transition text-center"
+              onClick={handleWriteClick}
+              className="w-32 sm:w-auto mx-auto sm:mx-0 px-4 py-2 sm:px-5 sm:py-3 rounded-lg sm:rounded-xl bg-indigo-900/40 border border-white/30 text-white font-medium sm:font-semibold hover:bg-indigo-900/60 transition text-center text-sm sm:text-base"
             >
               Write a blog
             </button>
@@ -126,7 +128,7 @@ const Home = () => {
       </section>
 
       {/* Features */}
-      <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+      <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto px-4">
         {[
           {
             title: "Author-only posting",
@@ -147,10 +149,12 @@ const Home = () => {
         ].map((f, i) => (
           <div
             key={i}
-            className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition"
+            className="rounded-xl border border-gray-200 p-4 sm:p-6 shadow-sm hover:shadow-md transition"
           >
-            <h3 className="font-semibold text-lg mb-2">{f.title}</h3>
-            <p className="text-gray-600 text-sm">{f.desc}</p>
+            <h3 className="font-semibold text-sm sm:text-lg mb-1 sm:mb-2">
+              {f.title}
+            </h3>
+            <p className="text-gray-600 text-xs sm:text-base">{f.desc}</p>
           </div>
         ))}
       </section>
