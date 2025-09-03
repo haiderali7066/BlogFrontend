@@ -87,7 +87,7 @@ const Home = () => {
   return (
     <div className="space-y-20 ">
       {/* Hero Section */}
-      <section className="rounded-2xl mt-6 sm:mt-10 bg-gradient-to-br from-blue-600 to-indigo-700 text-white px-4 py-10 sm:px-8 sm:py-16 shadow-xl">
+      <section className="rounded-2xl mt-14 sm:mt-14 bg-gradient-to-br from-blue-600 to-indigo-700 text-white px-4 py-10 sm:px-8 sm:py-16 shadow-xl">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 leading-tight">
             Share Ideas. Inspire Readers.
